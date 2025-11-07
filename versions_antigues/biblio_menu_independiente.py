@@ -1,17 +1,10 @@
-from catalogo import guardar_datos, cargar_datos
-
 class Biblioteca:
     def __init__(self):
-        datos = cargar_datos()
-        self.libros = datos.get("libros", [])
-        self.libros_prestados = [libro for libro in self.libros if not libro["disponible"]]
-        self.total_libros = len(self.libros)
-        self.total_libros_prestados = len(self.libros_prestados)
-
-    def _guardar(self):
-        """Guarda automáticamente la lista de libros en JSON."""
-        guardar_datos({"libros": self.libros})
-
+        self.total_libros = 0
+        self.total_libros_prestados = 0
+        self.libros = []
+        self.libros_prestados = []
+    
     def agregar_libro(self, titulo, autor):
         for libro in self.libros:
             if libro["titulo"].lower() == titulo.lower():
@@ -21,7 +14,6 @@ class Biblioteca:
         self.total_libros += 1
         print(f'Título: "{titulo}" agregado correctamente.')
         print(f'Total de libros: {self.total_libros}')
-        self._guardar()
 
     def mostrar_libros(self):
         if not self.libros:
@@ -43,7 +35,6 @@ class Biblioteca:
                 self.total_libros_prestados += 1
                 print(f'Has retirado el libro "{titulo}".')
                 print(f'La biblioteca lleva {self.total_libros_prestados} préstamos en total.')
-                self._guardar()
                 return
         print("Libro no encontrado.")
 
@@ -54,7 +45,6 @@ class Biblioteca:
                 self.libros_prestados.remove(libro)
                 print(f'Has devuelto el libro "{titulo}".')
                 print(f'Quedan {len(self.libros_prestados)} libros prestados actualmente.')
-                self._guardar()
                 return
         print("No se encontró el libro en la lista de préstamos.")
 
@@ -75,3 +65,47 @@ class Biblioteca:
             print("\nLibros prestados:")
             for libro in self.libros_prestados:
                 print(f' - "{libro["titulo"]}" de {libro["autor"]}')
+
+
+def menu():
+    biblioteca = Biblioteca()
+
+    while True:
+        print("\n=== MENÚ DE BIBLIOTECA ===")
+        print("1. Agregar libro")
+        print("2. Mostrar todos los libros")
+        print("3. Prestar libro")
+        print("4. Devolver libro")
+        print("5. Buscar por autor")
+        print("6. Mostrar libros prestados")
+        print("7. Salir")
+
+        opcion = input("Selecciona una opción (1-7): ")
+
+        match opcion:
+            case "1":
+                titulo = input("Título del libro: ")
+                autor = input("Autor del libro: ")
+                biblioteca.agregar_libro(titulo, autor)
+            case "2":
+                biblioteca.mostrar_libros()
+            case "3":
+                titulo = input("Título del libro a prestar: ")
+                biblioteca.prestar_libro(titulo)
+            case "4":
+                titulo = input("Título del libro a devolver: ")
+                biblioteca.devolver_libro(titulo)
+            case "5":
+                autor = input("Autor a buscar: ")
+                biblioteca.buscar_por_autor(autor)
+            case "6":
+                biblioteca.mostrar_prestados()
+            case "7":
+                print("Programa finalizado.")
+                break
+            case _:
+                print("Opción no válida. Intenta nuevamente.")
+
+
+if __name__ == "__main__":
+    menu()
