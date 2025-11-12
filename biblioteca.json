@@ -1,8 +1,118 @@
 {
     "libros": [
         {
-            "titulo": "cien años",
-            "autor": "gabriel",
+            "titulo": "Cien Años de Soledad",
+            "autor": "Gabriel García Márquez",
+            "disponible": true
+        },
+        {
+            "titulo": "Don Quijote de la Mancha",
+            "autor": "Miguel de Cervantes",
+            "disponible": true
+        },
+        {
+            "titulo": "La Sombra del Viento",
+            "autor": "Carlos Ruiz Zafón",
+            "disponible": true
+        },
+        {
+            "titulo": "1984",
+            "autor": "George Orwell",
+            "disponible": true
+        },
+        {
+            "titulo": "El Nombre de la Rosa",
+            "autor": "Umberto Eco",
+            "disponible": true
+        },
+        {
+            "titulo": "Orgullo y Prejuicio",
+            "autor": "Jane Austen",
+            "disponible": true
+        },
+        {
+            "titulo": "Matar a un Ruiseñor",
+            "autor": "Harper Lee",
+            "disponible": true
+        },
+        {
+            "titulo": "El Principito",
+            "autor": "Antoine de Saint-Exupéry",
+            "disponible": true
+        },
+        {
+            "titulo": "Crimen y Castigo",
+            "autor": "Fiódor Dostoyevski",
+            "disponible": true
+        },
+        {
+            "titulo": "Ulises",
+            "autor": "James Joyce",
+            "disponible": true
+        },
+        {
+            "titulo": "Fahrenheit 451",
+            "autor": "Ray Bradbury",
+            "disponible": true
+        },
+        {
+            "titulo": "El Gran Gatsby",
+            "autor": "F. Scott Fitzgerald",
+            "disponible": true
+        },
+        {
+            "titulo": "La Metamorfosis",
+            "autor": "Franz Kafka",
+            "disponible": true
+        },
+        {
+            "titulo": "El Señor de los Anillos",
+            "autor": "J.R.R. Tolkien",
+            "disponible": true
+        },
+        {
+            "titulo": "En Busca del Tiempo Perdido",
+            "autor": "Marcel Proust",
+            "disponible": true
+        },
+        {
+            "titulo": "La Iliada",
+            "autor": "Homero",
+            "disponible": true
+        },
+        {
+            "titulo": "La Odisea",
+            "autor": "Homero",
+            "disponible": true
+        },
+        {
+            "titulo": "Rayuela",
+            "autor": "Julio Cortázar",
+            "disponible": true
+        },
+        {
+            "titulo": "Pedro Páramo",
+            "autor": "Juan Rulfo",
+            "disponible": true
+        },
+        {
+            "titulo": "El Amor en los Tiempos del Cólera",
+            "autor": "Gabriel García Márquez",
+            "disponible": true
+        },
+        {
+            "titulo": "El Retrato de Dorian Gray",
+            "autor": "Oscar Wilde",
+            "disponible": true
+        },
+        {
+            "titulo": "Los Miserables",
+            "autor": "Victor Hugo",
+            "disponible": true
+        },
+        {
+            "titulo": "Harry Potter",
+            "autor": "Rowling",
             "disponible": true
         }
     ]
